@@ -59,6 +59,7 @@ def linreg(X, w, b):
 
 # 定义损失函数
 def squared_loss(y_hat, y):
+    # y可能是两维或以上的张量，需要展平成1维张量 
     return (y_hat - y.reshape(y_hat.shape)) ** 2 / 2
 
 # 定义优化算法
